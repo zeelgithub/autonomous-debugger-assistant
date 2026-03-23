@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "autonomous-debugger"
+version = "0.1.0"
+description = "Production multi-agent debugging system with LangGraph Plan→Execute→Evaluate"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+
+# 🏗️ LangGraph + LangChain ecosystem
+langgraph = ">=1.1.3"
+langchain = ">=1.2.13"
+langchain-core = ">=1.2.20"
+langchain-community = ">=0.4.1"
+langchain-openai = ">=1.1.11"
+langchain-ollama = ">=1.0.0"
+langsmith = ">=0.7.21"
+
+# 🌐 Backend
+fastapi = ">=0.135.1"
+uvicorn = { extras = ["standard"], version = ">=0.42.0" }
+httpx = ">=0.28.1"
+
+# 📊 Data
+pydantic = ">=2.12.5"
+pydantic-settings = ">=2.13.1"
+
+# 🔧 Integrations
+PyGithub = ">=2.4.0"
+
+# 🧪 Testing
+pytest = ">=8.0.0"
+pytest-asyncio = ">=0.23.5"
+pytest-cov = ">=5.0.0"
+
+# 🔍 Dev tools
+black = ">=24.0.0"
+ruff = ">=0.3.0"
+mypy = ">=1.10.0"
+streamlit = "^1.55.0"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
