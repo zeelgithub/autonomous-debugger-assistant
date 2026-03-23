@@ -7,38 +7,7 @@ It transforms failures (logs, stack traces, failing tests) into validated code f
 
 The system behaves like an **engineering team under controlled execution**, ensuring safe, iterative, and explainable debugging.
 
----
 
-## 🏗️ Architecture
-User (CLI / Streamlit)
-↓
-Model Provider Layer (OpenAI / Ollama)
-↓
-LangGraph Engine (StateGraph Orchestrator)
-↓
-┌──────────────────────────────────────────────┐
-│ CORE EXECUTION GRAPH │
-├──────────────────────────────────────────────┤
-│ Input Guardrail │
-│ ↓ │
-│ Planner Agent │
-│ ↓ │
-│ Log Analyzer │
-│ ↓ │
-│ Code Navigator │
-│ ↓ │
-│ Fix Generator │
-│ ↓ │
-│ Patch Guardrail │
-│ ↓ │
-│ Test Runner │
-│ ↓ │
-│ Evaluator (Control Brain) │
-│ ↓ ↑ │
-│ SUCCESS RETRY LOOP │
-└──────────────────────────────────────────────┘
-
----
 
 ## ✨ Key Features
 
